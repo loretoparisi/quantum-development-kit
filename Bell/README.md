@@ -150,6 +150,20 @@ Init:One  0s=490  1s=510  agree=1000
 
 Our statistics for the first qubit haven't changed (50-50 chance of a 0 or a 1), but now when we measure the second qubit, it is always the same as what we measured for the first qubit. Our `CNOT` has entangled the two qubits, so that whatever happens to one of them, happens to the other. If you reversed the measurements (did the second qubit before the first), the same thing would happen. The first measurement would be random and the second would be in lock step with whatever was discovered for the first (!).
 
+## Putting All Together
+Running all the examples together we will get the `BellTestClassical` with qubits measurements for the classical measurement, `BellTestPauli` for the Pauli X gate (x), `BellTestHadamard` for Hadamard (H) gate (for superposition), `BellTestEntanglement` for the entanglement experiment:
+
+```sh
+Classical - Init:Zero 0s=1000 1s=0
+Classical - Init:One  0s=0    1s=1000
+Pauli - Init:Zero 0s=0    1s=1000
+Pauli - Init:One  0s=1000 1s=0
+Hadamard - Init:Zero 0s=516  1s=484
+Hadamard - Init:One  0s=486  1s=514
+Entanglement - Init:Zero 0s=468  1s=532  agree=1000
+Entanglement - Init:One  0s=525  1s=475  agree=1000
+```
+
 # Quantum Theory
 For more infor about the Pauli - `X` gate, the `H` - Hadamard gate
 - [Quantum Basic Logic Gates](https://en.wikipedia.org/wiki/Quantum_logic_gate)
