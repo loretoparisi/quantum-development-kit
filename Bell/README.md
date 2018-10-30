@@ -94,7 +94,7 @@ We've added another Set operation to initialize qubit 1 to make sure that it's a
 ```C#
 Set(Zero, qubits[0]);
 Set(Zero, qubits[1]);
-```+
+```
 
 There is now a new return value (agree) that will keep track of every time the measurement from the first qubit matches the measurement of the second qubit.
 
